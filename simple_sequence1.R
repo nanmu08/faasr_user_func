@@ -25,6 +25,11 @@ F2 <- function(faasr) {
   args <- faasr_get_user_function_args(faasr)
 
   # test uninstall package case
+  is_installed <- function(pkg_name) {
+  return(pkg_name %in% rownames(installed.packages()))
+}
+
+print(is_installed("dplyr")) 
   # Create a sample data frame
   data <- data.frame(
   name = c("A", "B", "C", "D"),
