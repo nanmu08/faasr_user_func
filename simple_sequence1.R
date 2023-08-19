@@ -46,8 +46,8 @@ print(is_installed("dplyr"))
         
   # return arguments for this function (F2)
   # expects input1, input2: input file names; output: 
-  faasr_get_file(faasr, "S3_A", "folder", args$input1, "local", "input1.csv")
-  faasr_get_file(faasr, "S3_A", "folder", args$input2, "local", "input2.csv")
+  faasr_get_file(faasr, "S3_B", "folder", args$input1, "local", "input1.csv")
+  faasr_get_file(faasr, "S3_B", "folder", args$input2, "local", "input2.csv")
   # need to implement output <- input * input
   # if there's a header in each csv file, "header=T"
   input1 <- read.table("local/input1.csv", sep=",", header=F)
