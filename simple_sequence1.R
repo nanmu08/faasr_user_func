@@ -1,6 +1,5 @@
 #library("FaaSr")
-library(ggplot2)
-library(dplyr)       
+   
 F1 <- function(faasr) {
   # print("Hello from inside function F1")
   args <- faasr_get_user_function_args(faasr)
@@ -24,25 +23,19 @@ F2 <- function(faasr) {
   # print("Hello from inside function Fs")
   args <- faasr_get_user_function_args(faasr)
 
-  # test uninstall package case
-  is_installed <- function(pkg_name) {
-  return(pkg_name %in% rownames(installed.packages()))
+is_installed <- function(pkg_name) {
+    return(pkg_name %in% rownames(installed.packages()))
 }
 
-print(is_installed("dplyr")) 
-  # Create a sample data frame
-  data <- data.frame(
-  name = c("A", "B", "C", "D"),
-  value = c(3, 8, 6, 10)
-  )
+packages_to_test <- c("janitor", "lubridate", "broom", "textclean")
 
-  # Use dplyr to filter rows where value is greater than 5
-  filtered_data <- data %>%
-  filter(value > 5)
-
-  # Plot the filtered data using ggplot2
-  ggplot(filtered_data, aes(x = name, y = value)) +
-  geom_bar(stat = "identity")
+for(pkg in packages_to_test){
+  if(is_installed(pkg)){
+    cat(pkg, "is installed\n")
+  } else {
+    cat(pkg, "is NOT installed\n")
+  }
+}
         
   # return arguments for this function (F2)
   # expects input1, input2: input file names; output: 
