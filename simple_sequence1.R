@@ -1,6 +1,6 @@
 #library("FaaSr")
    
-F11 <- function(faasr) {
+F1 <- function(faasr) {
   # print("Hello from inside function F1")
   args <- faasr_get_user_function_args(faasr)
   # return arguments for this function (F1)
@@ -19,7 +19,7 @@ F11 <- function(faasr) {
 }	
 
 
-F2 <- function(faasr) {
+F21 <- function(faasr) {
   # print("Hello from inside function Fs")
   args <- faasr_get_user_function_args(faasr)
 
