@@ -49,7 +49,7 @@ print("Before cleaning:")
 print(df)
 
 # Use janitor to clean the names
-clean_df <- df %>% clean_names()
+clean_df <- clean_names(df)
 
 print("After cleaning:")
 print(clean_df)
