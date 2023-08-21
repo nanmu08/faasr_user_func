@@ -19,7 +19,7 @@ F1 <- function(faasr) {
 }	
 
 
-F21 <- function(faasr) {
+F2 <- function(faasr) {
   # print("Hello from inside function Fs")
   args <- faasr_get_user_function_args(faasr)
 
