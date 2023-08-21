@@ -23,36 +23,36 @@ F2 <- function(faasr) {
   # print("Hello from inside function Fs")
   args <- faasr_get_user_function_args(faasr)
 
-   # test uninstalled package
-is_installed <- function(pkg_name) {
-    return(pkg_name %in% rownames(installed.packages()))
-}
+#    # test uninstalled package
+# is_installed <- function(pkg_name) {
+#     return(pkg_name %in% rownames(installed.packages()))
+# }
 
-packages_to_test <- c("janitor", "lubridate", "broom", "textclean")
+# packages_to_test <- c("janitor", "lubridate", "broom", "textclean")
 
-for(pkg in packages_to_test){
-  if(is_installed(pkg)){
-    cat(pkg, "is installed\n")
-  } else {
-    cat(pkg, "is NOT installed\n")
-  }
-}
-   # Create a sample data frame
-df <- data.frame(
-  "First Name" = c("John", "Jane", "Doe"),
-  "Last-Name" = c("Doe", "Doe", "John"),
-  "Age___" = c(20, 25, 30),
-  "Email.Address" = c("john.doe@email.com", "jane.doe@email.com", "doe.john@email.com")
-)
+# for(pkg in packages_to_test){
+#   if(is_installed(pkg)){
+#     cat(pkg, "is installed\n")
+#   } else {
+#     cat(pkg, "is NOT installed\n")
+#   }
+# }
+#    # Create a sample data frame
+# df <- data.frame(
+#   "First Name" = c("John", "Jane", "Doe"),
+#   "Last-Name" = c("Doe", "Doe", "John"),
+#   "Age___" = c(20, 25, 30),
+#   "Email.Address" = c("john.doe@email.com", "jane.doe@email.com", "doe.john@email.com")
+# )
 
-print("Before cleaning:")
-print(df)
+# print("Before cleaning:")
+# print(df)
 
-# Use janitor to clean the names
-clean_df <- clean_names(df)
+# # Use janitor to clean the names
+# clean_df <- clean_names(df)
 
-print("After cleaning:")
-print(clean_df)
+# print("After cleaning:")
+# print(clean_df)
 
    
         
