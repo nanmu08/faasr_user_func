@@ -1,4 +1,4 @@
-compute_product <- function(folder, input1, input2, output) {
+compute_productdd <- function(folder, input1, input2, output) {
 
   
   # Download the input files from S3 bucket
