@@ -11,35 +11,35 @@ compute_product <- function(folder, input1, input2, output) {
 
 
  # ---------test uninstalled package-----------
-  is_installed <- function(pkg_name) {
-      return(pkg_name %in% rownames(installed.packages()))
-  }
+  # is_installed <- function(pkg_name) {
+  #     return(pkg_name %in% rownames(installed.packages()))
+  # }
   
-  packages_to_test <- c("janitor", "lubridate", "broom", "textclean")
+  # packages_to_test <- c("janitor", "lubridate", "broom", "textclean")
   
-  for(pkg in packages_to_test){
-    if(is_installed(pkg)){
-      cat(pkg, "is installed\n")
-    } else {
-      cat(pkg, "is NOT installed\n")
-    }
-  }
-     # Create a sample data frame
-  df <- data.frame(
-    "First Name" = c("John", "Jane", "Doe"),
-    "Last-Name" = c("Doe", "Doe", "John"),
-    "Age___" = c(20, 25, 30),
-    "Email.Address" = c("john.doe@email.com", "jane.doe@email.com", "doe.john@email.com")
-  )
+  # for(pkg in packages_to_test){
+  #   if(is_installed(pkg)){
+  #     cat(pkg, "is installed\n")
+  #   } else {
+  #     cat(pkg, "is NOT installed\n")
+  #   }
+  # }
+  #    # Create a sample data frame
+  # df <- data.frame(
+  #   "First Name" = c("John", "Jane", "Doe"),
+  #   "Last-Name" = c("Doe", "Doe", "John"),
+  #   "Age___" = c(20, 25, 30),
+  #   "Email.Address" = c("john.doe@email.com", "jane.doe@email.com", "doe.john@email.com")
+  # )
   
-  print("Before cleaning:")
-  print(df)
+  # print("Before cleaning:")
+  # print(df)
   
-  # Use janitor to clean the names
-  clean_df <- clean_names(df)
+  # # Use janitor to clean the names
+  # clean_df <- clean_names(df)
   
-  print("After cleaning:")
-  print(clean_df)
+  # print("After cleaning:")
+  # print(clean_df)
   # ---------end test uninstalled package-----------
 
   
